@@ -1,0 +1,20 @@
+# Import necessary libraries
+from sklearn import datasets
+from sklearn.svm import SVC
+
+# Load a sample dataset (e.g., the Iris dataset)
+iris = datasets.load_iris()
+X = iris.data  # Features
+y = iris.target  # Labels
+
+# Create an SVM model
+svm_model = SVC()
+
+# Train the model on the data
+svm_model.fit(X, y)
+
+# Make predictions (optional: using the same data for simplicity)
+y_pred = svm_model.predict(X)
+
+# Print the predictions
+print("Predictions:", y_pred)
